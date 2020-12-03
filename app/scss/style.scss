@@ -2,4 +2,76 @@
 @import "libs";
 @import "fonts";
 @import "global";
+//header start
+.header {
+    &__inner {
+        padding: 60px 0 10px;
+        min-height: 67px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+    }
+    &__menu {
+        max-width: 500px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__item {
+        &+.header__item {
+            margin-left: 45px;
+        }
+    }
+    &__link {
+        font-size: 22px;
+        line-height: 22px;
+        font-weight: 500;
+        &:hover {
+            border-bottom: 2px solid $yellow;
+            padding-bottom: 10px;
+        }
+        &:active {
+            color: $yellow;
+        }
+    }
+}
+
+//header end
+//main start
+.main {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        min-height: 700px;
+        position: relative;
+    }
+    &__info {
+        margin-top: 240px;
+    }
+    &__title {
+        font-size: 72px;
+        line-height: 72px;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    &__subtitle {
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        span {
+            color: $yellow;
+        }
+    }
+    &__image {
+        position: absolute;
+        right: 0;
+    }
+}
+
+//main end
 @import "media";
