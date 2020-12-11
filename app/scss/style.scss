@@ -2,6 +2,13 @@
 @import "libs";
 @import "fonts";
 @import "global";
+.wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 50px 0;
+}
+
 //header start
 .header {
     &__inner {
@@ -28,7 +35,7 @@
     }
     &__link {
         font-size: 22px;
-        line-height: 22px;
+        line-height: 31px;
         font-weight: 500;
         &:hover {
             border-bottom: 2px solid $yellow;
@@ -54,13 +61,13 @@
     }
     &__title {
         font-size: 72px;
-        line-height: 72px;
+        line-height: 90px;
         font-weight: 900;
         margin-bottom: 20px;
     }
     &__subtitle {
         font-size: 50px;
-        line-height: 50px;
+        line-height: 70px;
         font-weight: 700;
         margin-bottom: 50px;
         span {
@@ -74,4 +81,111 @@
 }
 
 //main end
+//rates start 
+.rates {
+    &__inner {
+        padding: 80px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+    &__item {
+        background-color: $bg;
+        text-align: center;
+        margin-top: 15px;
+        transition: all 0.3s ease-in-out;
+        &:nth-child(2n) {
+            .rates__item-top {
+                background-color: $rates-bg;
+            }
+        }
+        &:hover {
+            margin-top: 0;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &__item-top {
+        padding: 30px;
+        font-weight: 700;
+        background-color: #fff;
+        &:nth-child(2n) {
+            background-color: $rates-bg;
+        }
+    }
+    &__item-bottom {
+        padding: 30px 30px 50px;
+        color: #fff;
+        background-color: $text;
+        box-shadow: -4px 4px 18px rgba(0, 0, 0, 0.2);
+    }
+    &__item-title {
+        font-size: 36px;
+        line-height: 54px;
+        color: $yellow;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    &__prices {
+        margin: 0 auto;
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $yellow;
+        text-align: left;
+        margin-bottom: 20px;
+        span {
+            font-size: 16px;
+            opacity: 0.4;
+            text-decoration: line-through;
+        }
+    }
+    &__info {
+        margin-bottom: 50px;
+    }
+    &__btn {
+        .btn {
+            padding: 18px 24px;
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+}
+
+//rates end
+//consultation start
+.consultation {
+    &__inner {
+        padding: 50px 0 80px;
+    }
+    &__title {
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    &__info {
+        font-size: 28px;
+        line-height: 42px;
+        margin-bottom: 60px;
+    }
+    .btn+.btn {
+        margin-left: 70px;
+    }
+}
+
+//consultation end
+//statistics start
+.statistics {
+    &__title {
+        font-size: 50px;
+        line-height: 75px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        span {
+            color: ;
+        }
+    }
+}
+
+//statistics end
 @import "media";
